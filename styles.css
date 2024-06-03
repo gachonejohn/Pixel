@@ -1,0 +1,231 @@
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #22c788;
+}
+.flip-container {
+  width: 280px;
+  height: 380px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  perspective: 1000px;
+  margin: 100px auto;
+}
+
+.flip-inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flip-container:hover .flip-inner-container {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.flip-front {
+  background: white;
+  padding: 2px;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.flip-back {
+  width: 280px;
+  height: 380px;
+  background: white;
+  transform: rotateY(180deg);
+}
+
+.flip-back .profile-image img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #22c788;
+  margin-top: 20px;
+}
+
+.flip-back p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.flip-back ul {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.flip-back ul a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 7px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: #22c788;
+  transform: all 0.6s;
+}
+.flip-back ul a:hover {
+  color: #22c788;
+  border-color: #22c788;
+  background: linear-gradient(375deg, transparent, transparent);
+}@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background:#22c788;
+}
+.flip-container {
+  width: 280px;
+  height: 380px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  perspective: 1000px;
+  margin: 100px auto;
+}
+
+.flip-inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flip-container:hover .flip-inner-container {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.flip-front {
+  background: white;
+  padding: 2px;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.flip-back {
+  width: 280px;
+  height: 380px;
+  background: white;
+  transform: rotateY(180deg);
+}
+
+.flip-back .profile-image img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #22c788;
+  margin-top: 20px;
+}
+
+.flip-back p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.flip-back ul {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.flip-back ul a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 7px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: #22c788;
+  transform: all 0.6s;
+}
+.flip-back ul a:hover {
+  color: #22c788;
+  border-color: #22c788;
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e90ff;
+  overflow: hidden;
+}
+
+#water {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drop {
+  position: absolute;
+  border-radius: 50%;
+  animation: drop 5s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(var(--x), calc(var(--y) * -1)) scale(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--x), calc(var(--y) * 1.5)) scale(1);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), calc(var(--y) * 1)) scale(0);
+    opacity: 0;
+  }
+}
